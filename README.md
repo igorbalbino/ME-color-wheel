@@ -14,8 +14,7 @@ Este projeto é uma aplicação web com JavaScript vanilla, servida usando Node.
 
 1. Clone ou baixe o projeto e entre na pasta:
 
-```
-git clone https://seu-repositorio.git
+```git clone https://seu-repositorio.git
 cd nome-do-projeto```
 
 2. Instale as dependências:
