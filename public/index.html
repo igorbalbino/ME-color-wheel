@@ -5,7 +5,24 @@
 		<title>Rinbow Wheel</title>
 		<link rel="stylesheet" href="style.css">
 		
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="description" content="Ferramenta online de roda de cores interativa. Ideal para designers e criadores que querem explorar combinações de cores e paletas harmoniosas." />
+		<meta name="keywords" content="color wheel, roda de cores, paleta de cores, teoria das cores, design, cores complementares, cores análogas, harmonias de cor, web design, creatio" />
+		<meta name="author" content="CREATIO" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph (para redes sociais como Facebook) -->
+		<meta property="og:title" content="Rainbow Wheel" />
+		<meta property="og:description" content="Ferramenta online de roda de cores interativa para explorar combinações e harmonias de cores." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://creatiotech.com.br" />
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Interactive Color Wheel – Escolha e Crie Paletas de Cores" />
+		<meta name="twitter:description" content="Ferramenta online de roda de cores interativa para designers e criadores." />
+		<meta name="twitter:image" content="https://creatiotech.com.br" />
 	</head>
 	
 	<body>
@@ -16,12 +33,33 @@
 
 
 		<div class="colors">
-		<div class="color-box" id="mainColor"><span>#FF0000</span><br>Principal</div>
-		<div class="color-box" id="complementary"><span></span><br>Complementar</div>
-		<div class="color-box" id="analog1"><span></span><br>Análoga 1</div>
-		<div class="color-box" id="analog2"><span></span><br>Análoga 2</div>
-		<div class="color-box" id="triad1"><span></span><br>Triádica 1</div>
-		<div class="color-box" id="triad2"><span></span><br>Triádica 2</div>
+			<div class="color-box" id="mainColor"><span>#FF0000</span><br>Principal</div>
+			<div class="color-box" id="complementary"><span></span><br>Complementar</div>
+			<div class="color-box" id="analog1"><span></span><br>Análoga 1</div>
+			<div class="color-box" id="analog2"><span></span><br>Análoga 2</div>
+			<div class="color-box" id="triad1"><span></span><br>Triádica 1</div>
+			<div class="color-box" id="triad2"><span></span><br>Triádica 2</div>
+		</div>
+		
+		<h2>Controle Manual de Cores</h2>
+		
+		<!-- NOVA SEÇÃO: barras de cores -->
+		<div class="manual-colors">
+		<!-- 5 barras -->
+		<div class="color-bar" id="bar1"></div>
+		<div class="color-bar" id="bar2"></div>
+		<div class="color-bar" id="bar3"></div>
+		<div class="color-bar" id="bar4"></div>
+		<div class="color-bar" id="bar5"></div>
+
+		<!-- 5 inputs para hex -->
+		<div class="manual-inputs">
+		<input type="text" id="input1" placeholder="#RRGGBB" maxlength="7">
+		<input type="text" id="input2" placeholder="#RRGGBB" maxlength="7">
+		<input type="text" id="input3" placeholder="#RRGGBB" maxlength="7">
+		<input type="text" id="input4" placeholder="#RRGGBB" maxlength="7">
+		<input type="text" id="input5" placeholder="#RRGGBB" maxlength="7">
+		</div>
 		</div>
 		
 		

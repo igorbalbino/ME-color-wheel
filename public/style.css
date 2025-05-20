@@ -67,3 +67,35 @@ input[type="color"] {
   color: #000;
   font-size: 14px;
 }
+
+
+/**/
+
+.manual-colors {
+  margin-top: 30px;
+}
+
+.color-bar {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.manual-inputs {
+  margin-top: 10px;
+}
+
+.manual-inputs input[type="text"] {
+  width: 100px;
+  margin: 0 5px;
+  padding: 4px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

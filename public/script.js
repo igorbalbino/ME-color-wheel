@@ -212,6 +212,77 @@ function hexToHSL(hex) {
   return { h, s, l };
 }
 
+// referências
+const bars = [
+  document.getElementById('bar1'),
+  document.getElementById('bar2'),
+  document.getElementById('bar3'),
+  document.getElementById('bar4'),
+  document.getElementById('bar5'),
+];
+const inputs = [
+  document.getElementById('input1'),
+  document.getElementById('input2'),
+  document.getElementById('input3'),
+  document.getElementById('input4'),
+  document.getElementById('input5'),
+];
+
+// atualiza barras de cor a partir de um array de hex codes
+function updateManualBars(hexArray) {
+  hexArray.forEach((hex, i) => {
+    if (/^#([0-9A-F]{6})$/i.test(hex)) {
+      bars[i].style.backgroundColor = hex;
+    } else {
+      bars[i].style.backgroundColor = '#ddd'; // fallback
+    }
+  });
+}
+
+// quando o usuário digitar manualmente
+inputs.forEach((input, idx) => {
+  input.addEventListener('change', () => {
+    // força uppercase e # na frente
+    let val = input.value.trim().toUpperCase();
+    if (val[0] !== '#') val = '#' + val;
+    input.value = val;
+
+    // coleta todos os valores
+    const hexs = inputs.map(i => i.value.trim().toUpperCase());
+    updateManualBars(hexs);
+  });
+});
+
+// Opcional: se quiser inicializar com as cores automáticas,
+// por exemplo, pegando main, comp, analógica...:
+function initManualInputsFromAuto() {
+  /*const autoHexs = [
+    document.getElementById('mainColor').querySelector('span').textContent,
+    document.getElementById('complementary').querySelector('span').textContent,
+    document.getElementById('analog1').querySelector('span').textContent,
+    document.getElementById('analog2').querySelector('span').textContent,
+    document.getElementById('triad1').querySelector('span').textContent,
+  ];*/
+  const autoHexs = [
+    '#000000',
+	'#7F00FF',
+	'#FFF85B',
+	'#B4F8FF',
+	'#E0E0E0',
+  ];
+  inputs.forEach((inp, i) => inp.value = autoHexs[i]);
+  updateManualBars(autoHexs);
+}
+
+// chame isso depois de qualquer updateColors, por exemplo:
+const originalUpdateColors = updateColors;
+updateColors = function(hex) {
+  originalUpdateColors(hex);
+  initManualInputsFromAuto();
+};
+
+// inicializa tudo
+initManualInputsFromAuto();
 
 // Inicialização
 updateColors('#ff0000');
