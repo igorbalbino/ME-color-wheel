@@ -14,24 +14,21 @@ Este projeto é uma aplicação web com JavaScript vanilla, servida usando Node.
 
 1. Clone ou baixe o projeto e entre na pasta:
 
-```bash
+```
 git clone https://seu-repositorio.git
 cd nome-do-projeto```
 
 2. Instale as dependências:
 
-```npm install
-```
+```npm install```
 
 3. Execute o servidor:
 
-```node server.js
-```
+```node server.js```
 
 4. Abra o navegador em:
 
-```http://localhost:3000
-```
+```http://localhost:3000```
 
 ### Sobre o projeto
 - Front-end: JavaScript vanilla, HTML e CSS.
