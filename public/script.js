@@ -281,6 +281,41 @@ updateColors = function(hex) {
   initManualInputsFromAuto();
 };
 
+/**/
+
+function adjustBrightness(hex, factor) {
+  const r = Math.min(255, Math.max(0, parseInt(hex.slice(1, 3), 16) * factor));
+  const g = Math.min(255, Math.max(0, parseInt(hex.slice(3, 5), 16) * factor));
+  const b = Math.min(255, Math.max(0, parseInt(hex.slice(5, 7), 16) * factor));
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+// Atualiza brilho das caixas automáticas
+document.getElementById('autoBrightness').addEventListener('input', () => {
+  const factor = parseFloat(document.getElementById('autoBrightness').value);
+  const boxes = document.querySelectorAll('.color-box');
+  boxes.forEach(box => {
+    const hex = box.textContent;
+    box.style.backgroundColor = adjustBrightness(hex, factor);
+  });
+});
+
+// Atualiza brilho das barras manuais
+document.getElementById('manualBrightness').addEventListener('input', () => {
+  const factor = parseFloat(document.getElementById('manualBrightness').value);
+  for (let i = 1; i <= 5; i++) {
+    const input = document.getElementById(`input${i}`);
+    const bar = document.getElementById(`bar${i}`);
+    const hex = input.value;
+    if (/^#[0-9A-Fa-f]{6}$/.test(hex)) {
+      bar.style.backgroundColor = adjustBrightness(hex, factor);
+    }
+  }
+});
+
+
+/**/
+
 // inicializa tudo
 initManualInputsFromAuto();
 

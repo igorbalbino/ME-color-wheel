@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8">
-		<title>Rinbow Wheel</title>
+		<title>Rainbow Wheel</title>
 		<link rel="stylesheet" href="style.css">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,6 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Interactive Color Wheel – Escolha e Crie Paletas de Cores" />
 		<meta name="twitter:description" content="Ferramenta online de roda de cores interativa para designers e criadores." />
-		<meta name="twitter:image" content="https://creatiotech.com.br" />
 	</head>
 	
 	<body>
@@ -41,25 +40,37 @@
 			<div class="color-box" id="triad2"><span></span><br>Triádica 2</div>
 		</div>
 		
-		<h2>Controle Manual de Cores</h2>
+		<div>
+			<label for="autoBrightness">☀️ Brilho</label><br>
+			<input type="range" id="autoBrightness" min="0" max="2" step="0.01" value="1">
+		</div>
+
+		
+		<h2>🖐🏿 Controle Manual de Cores</h2>
 		
 		<!-- NOVA SEÇÃO: barras de cores -->
 		<div class="manual-colors">
-		<!-- 5 barras -->
-		<div class="color-bar" id="bar1"></div>
-		<div class="color-bar" id="bar2"></div>
-		<div class="color-bar" id="bar3"></div>
-		<div class="color-bar" id="bar4"></div>
-		<div class="color-bar" id="bar5"></div>
+			<!-- 5 barras -->
+			<div class="color-bar" id="bar1"></div>
+			<div class="color-bar" id="bar2"></div>
+			<div class="color-bar" id="bar3"></div>
+			<div class="color-bar" id="bar4"></div>
+			<div class="color-bar" id="bar5"></div>
 
-		<!-- 5 inputs para hex -->
-		<div class="manual-inputs">
-		<input type="text" id="input1" placeholder="#RRGGBB" maxlength="7">
-		<input type="text" id="input2" placeholder="#RRGGBB" maxlength="7">
-		<input type="text" id="input3" placeholder="#RRGGBB" maxlength="7">
-		<input type="text" id="input4" placeholder="#RRGGBB" maxlength="7">
-		<input type="text" id="input5" placeholder="#RRGGBB" maxlength="7">
-		</div>
+			<!-- 5 inputs para hex -->
+			<div class="manual-inputs">
+				<input type="text" id="input1" placeholder="#RRGGBB" maxlength="7">
+				<input type="text" id="input2" placeholder="#RRGGBB" maxlength="7">
+				<input type="text" id="input3" placeholder="#RRGGBB" maxlength="7">
+				<input type="text" id="input4" placeholder="#RRGGBB" maxlength="7">
+				<input type="text" id="input5" placeholder="#RRGGBB" maxlength="7">
+			</div>
+			
+			<div>
+				<label for="manualBrightness">☀️ Brilho</label><br>
+				<input type="range" id="manualBrightness" min="0" max="2" step="0.01" value="1">
+			</div>
+
 		</div>
 		
 		
